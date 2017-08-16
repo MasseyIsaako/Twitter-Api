@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Twitter API</title>
+ 	<meta charset="utf-8">
+
+ 	<!-- Boostrap CSS -->
+ 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+ 	<!-- My Styling -->
+ 	<link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+ <body>
+ 	<h1>Twitter API</h1>
+
+ 	<form method="GET" action="/">
+ 		<!-- Search -->
+ 		<label for="topic">Search Twitter</label>
+ 		<input type="text" name="search" id="search" class="form-control" placeholder="Type here . . .">
+
+ 		<!-- Submit -->
+ 		<input type="submit" name="submit" id="submit" class="btn btn-primary" placeholder="Submit">
+ 	</form>
+
+ 	<table id="table-items">
+		<tr>
+			<th>Tweet</th>
+			<th>Image</th>
+			<th>User</th>
+		</tr>
+		<tr class="appended-row">
+			<td>Unknown</td>
+			<td>Unknown</td>
+			<td>Unknown</td>
+		</tr>
+	</table>
+ 	
+ 	<!-- jQuery -->
+ 	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+ 	<!-- Ajax Script -->
+ 	<script type="text/javascript" src="js/script.js"></script>
+ </body>
+ </html>

@@ -1,0 +1,46 @@
+body, html{
+	padding:0px;
+	margin:0px;
+	background-color:#333333;
+}
+
+h1{
+	color:#EBEBEB;
+	text-align:center;
+}
+
+form{
+	width:80%;
+	margin:10px 10%;
+}
+
+label{
+	color:#EBEBEB;
+}
+
+#submit{
+	margin-top:10px;
+}
+
+table{
+	border-collapse:collapse;
+	width:80%;
+	margin:10px 10%;
+}
+
+th, td{
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+th{
+	color:#777777;
+	font-size:14px;
+	font-weight:700;
+}
+
+td{
+	color:#EBEBEB;
+	font-weight:300 !important;
+}
