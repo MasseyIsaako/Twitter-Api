@@ -33,7 +33,7 @@ app.use(function(request, response, next){
 
 app.get("/search=:term", function(request, response){
 	var term = request.params.term;
-	var params = {q:term, count:1};
+	var params = {q:term, count:10};
 	T.get("search/tweets", params, function(error, tweets, twitterResponse){
 		if(!error){
 			response.json(tweets);
