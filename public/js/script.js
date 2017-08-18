@@ -27,9 +27,22 @@ $("#submit").click(function(event){
 
 	$.ajax({
 		url:"http://localhost:3000/search=" + searchTerm,
+		beforesend: function(xhr){
+			if(xhr.overrideMimeType){
+				xhr.overrideMimeType("application/json");
+			}
+		},
+		contentType:"application/json",
 		dataType: "json",
 		success: function(DataFromJSON){
-			console.log(DataFromJSON);
+			var message;
+			var favourites;
+			var username;
+			console.log(DataFromJSON.statuses[0]);
+			// for (var i = 0; i < DataFromJSON.statuses.length; i++) {
+			// 	message = DataFromJSON.statuses[i].text;
+			// 	console.log(message);
+			// };
 		}, error: function(){
 			console.log("Error, server not responding.");
 		}
