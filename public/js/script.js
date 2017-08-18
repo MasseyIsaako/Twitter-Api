@@ -26,7 +26,7 @@ $("#submit").click(function(event){
 	$(".appended-row").remove();
 
 	$.ajax({
-		url:"localhost:3000/search=" + searchTerm,
+		url:"http://localhost:3000/search=" + searchTerm,
 		dataType: "json",
 		success: function(DataFromJSON){
 			console.log(DataFromJSON);
