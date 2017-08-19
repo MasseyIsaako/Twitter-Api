@@ -7,34 +7,54 @@
  	<!-- Boostrap CSS -->
  	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
+ 	<!-- Font-Awesome CSS -->
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
  	<!-- My Styling -->
  	<link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
  <body>
- 	<h1>Twitter API</h1>
+ 	<div id="wrapper">
+ 		<h1>Tweeter Finder</h1>
+	 	<i class="fa fa-twitter" aria-hidden="true"></i>
 
- 	<form method="GET" action="/">
- 		<!-- Search -->
- 		<label for="topic">Find a Tweet</label>
- 		<input type="text" name="search" id="search" class="form-control" placeholder="Type here . . .">
- 		<span id="error-message"></span><br>
+	 	<form method="GET" action="/">
+	 		<!-- Search -->
+	 		<label for="topic">Find a Tweet</label>
+	 		<input type="text" name="search" id="search" class="form-control" placeholder="Type here . . .">
+	 		<span id="error-message"></span><br>
 
- 		<!-- Submit -->
- 		<input type="submit" name="submit" id="submit" class="btn btn-primary" placeholder="Submit">
- 	</form>
+	 		<!-- Submit -->
+	 		<input type="submit" name="submit" id="submit" class="btn btn-primary" placeholder="Submit">
+	 	</form>
 
- 	<table id="table-items">
-		<tr>
-			<th>Tweet</th>
-			<th>Image</th>
-			<th>User</th>
-		</tr>
-		<tr class="appended-row">
-			<td>Unknown</td>
-			<td>Unknown</td>
-			<td>Unknown</td>
-		</tr>
-	</table>
+	 	<table id="table-items">
+			<tr>
+				<th>Username</th>
+				<th>Location</th>
+				<th>Followers</th>
+				<th>Image</th>
+			</tr>
+			<tr class="appended-row">
+				<td>Unknown</td>
+				<td>Unknown</td>
+				<td>Unknown</td>
+				<td>Unknown</td>
+			</tr>
+		</table>
+
+		<button id="clear-table" type="button" class="btn btn-primary">Clear Table</button>
+
+		<i id="question" class="fa fa-question-circle" aria-hidden="true"></i>
+
+		<div id="overlay">
+			<div id="content-container">
+				<h4 id="close">About Tweeter Finder</h4>
+				<p>Search Twitter for key phrases.</p>
+				<p>The results you see in the table are people who have either tweeted your search phrase, or are somehow associated with it.</p>
+			</div>
+		</div>
+ 	</div>
  	
  	<!-- jQuery -->
  	<script type="text/javascript" src="js/jquery.min.js"></script>

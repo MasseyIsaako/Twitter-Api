@@ -17,7 +17,6 @@ var app = express();
 // Finding specific files for connection
 app.use(cors());
 app.use(express.static("./public"));
-app.use(express.static("./node_modules/font-awesome/fonts"));
 
 // jquery
 app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")));
@@ -33,7 +32,7 @@ app.use(function(request, response, next){
 
 app.get("/search=:term", function(request, response){
 	var term = request.params.term;
-	var params = {q:term, count:10};
+	var params = {q:term, count:5};
 	T.get("search/tweets", params, function(error, tweets, twitterResponse){
 		if(!error){
 			response.json(tweets);
