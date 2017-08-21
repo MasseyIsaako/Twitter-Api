@@ -40,14 +40,5 @@ app.get("/search=:term", function(request, response){
 	});
 });
 
-app.get("/trends", function(request, response){
-	var params = {id:23424916};
-	T.get("trends/place", params, function(error, trends, twitterResponse){
-		if(!error){
-			response.json(trends);
-		}
-	});
-});
-
 app.listen(3000);
 console.log("Server running on port 3000");
